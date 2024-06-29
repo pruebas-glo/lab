@@ -1,0 +1,17 @@
+backend:
+  image:
+    repository: your-docker-repo/backend
+    tag: "latest"
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 3000
+
+frontend:
+  image:
+    repository: your-docker-repo/frontend
+    tag: "latest"
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
